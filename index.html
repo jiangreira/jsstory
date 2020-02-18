@@ -17,15 +17,16 @@
     <style>
       body {
         font-family: "微軟正黑體";
-        height: 100%;
         text-align: center;
-        background: #1b180f;
+        background: url("img/bg.png") ;
+        background-size:cover;
+        background-repeat: no-repeat;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        flex-direction: column;
       }
+      
       #btn1 {
-        background: teal;
+        background: #ef3b48;
         width: 400px;
         height: 100px;
         margin: 20% auto;
@@ -36,26 +37,29 @@
       }
       #btn1:hover {
         box-shadow: 10px 15px 50px black;
-        background: hotpink;
+        background: #ffd758;
+        color: #ca3535;
       }
-      .footer {
-        position: absolute;
-        bottom: 0px;
-        color: white;
+      footer{
+        color: #ff7d98;
         font-size: 2rem;
         font-family: "Ma Shan Zheng", cursive;
-        text-shadow: 3px 2px 1px black;
+        text-shadow: 3px 2px 1px #fcd2d5;
+        position: relative;
+        
       }
       @media screen and (max-width: 800px) {
-        #btn1 {
-          margin: 50% auto;
+        body {
+          background-size:unset;
         }
       }
     </style>
   </head>
   <body>
-    <div id="btn1">開始</div>
-    <div class="footer">reirajiang © 2020</div>
+    <div id="btn1">START</div>
+    <footer>
+      reirajiang © 2020
+    </footer>
     <script>
       $("#btn1").click(function() {
         $("#btn1").hide();
